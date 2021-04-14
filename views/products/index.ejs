@@ -1,6 +1,8 @@
 <%- include('../partials/header') %> 
-    <h1>Product List</h1>
-    <a href="/products/new">Add Product</a>
+    <h1>Product List [<%= category %>]</h1>
+    <% if (category !== 'All') { %>
+        <a href="/products">Show All</a> 
+    <% } %>
     <ul>
         <% for(let p of products) { %> 
         <li>
@@ -9,4 +11,5 @@
         </li>
         <% } %> 
     </ul>
+    <a href="/products/new">Add Product</a>
 <%- include('../partials/footer') %> 
