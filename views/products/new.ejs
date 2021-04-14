@@ -1,0 +1,16 @@
+<%- include('../partials/header')  %> 
+    <h1>Add A Product</h1>
+    <form action="/products" method="POST">
+        <label for="name">Product Name</label>
+        <input type="text" name="name" id="name" placeholder="name">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" placeholder="price">
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <% for(let category of categories) { %> 
+                <option value="<%= category %>"><%= category %></option>
+            <% } %> 
+        </select>
+        <button>Add</button>
+    </form>
+<%- include('../partials/footer')  %> 

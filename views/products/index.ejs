@@ -1,8 +1,12 @@
 <%- include('../partials/header') %> 
     <h1>Product List</h1>
+    <a href="/products/new">Add Product</a>
     <ul>
         <% for(let p of products) { %> 
-        <li><a href="/products/<%= p._id %> "><%= p.name %></a></li>
+        <li>
+            <a href="/products/<%= p._id %> "><%= p.name %></a>
+            <a href="/products/<%= p._id %>/edit">Edit</a>
+        </li>
         <% } %> 
     </ul>
 <%- include('../partials/footer') %> 

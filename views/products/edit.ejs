@@ -1,0 +1,17 @@
+<%- include('../partials/header')  %> 
+    <h1>Edit: <%= product.name %></h1>
+    <form action="/products/<%= product._id %>/?_method=PUT" method="POST">
+        <label for="name">Product Name</label>
+        <input type="text" name="name" id="name" placeholder="name" value="<%= product.name %>">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" placeholder="price"  value="<%= product.price %>">
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <% for(let category of categories) { %> 
+                <option value="<%= category %>" <%= product.category == category && 'selected' %> ><%= category %></option>
+            <% } %> 
+        </select>
+        <button>Update</button>
+        <a href="/products/<%= product._id %>">Back</a>
+    </form>
+<%- include('../partials/footer')  %> 
