@@ -1,0 +1,24 @@
+{
+  "name": "experiments",
+  "version": "1.0.0",
+  "description": "this is just a temporary git repo for my experiments",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fafansin/experiments.git"
+  },
+  "author": "Laviel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fafansin/experiments/issues"
+  },
+  "homepage": "https://github.com/fafansin/experiments#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
+}

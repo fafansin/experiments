@@ -1,0 +1,8 @@
+<%- include('../partials/header') %> 
+    <h1>Product List</h1>
+    <ul>
+        <% for(let p of products) { %> 
+        <li><a href="/products/<%= p._id %> "><%= p.name %></a></li>
+        <% } %> 
+    </ul>
+<%- include('../partials/footer') %> 
